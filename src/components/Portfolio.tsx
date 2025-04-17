@@ -87,39 +87,43 @@ const Portfolio = () => {
             </TabsList>
           </div>
           
-          <TabsContent value={activeFilter} className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredItems.map((item) => (
-                <div 
-                  key={item.id} 
-                  className="group relative bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 animate-on-scroll"
-                >
-                  <div className="relative overflow-hidden h-64">
-                    <img 
-                      src={item.image} 
-                      alt={item.title} 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <h3 className="text-white font-semibold text-lg font-display">{item.title}</h3>
-                      <p className="text-white/80 text-sm mt-1">{item.description}</p>
-                      <a 
-                        href={item.link} 
-                        className="inline-flex items-center mt-3 text-xs text-white/90 hover:text-white"
-                      >
-                        View Project <ExternalLink className="ml-1 h-3 w-3" />
-                      </a>
+          {/* The key issue was here - we need to render all TabsContent components with value={category} */}
+          {categories.map((category) => (
+            <TabsContent key={category} value={category} className="mt-0">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Show filtered items based on activeFilter, not based on each TabsContent */}
+                {filteredItems.map((item) => (
+                  <div 
+                    key={item.id} 
+                    className="group relative bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 animate-on-scroll"
+                  >
+                    <div className="relative overflow-hidden h-64">
+                      <img 
+                        src={item.image} 
+                        alt={item.title} 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 className="text-white font-semibold text-lg font-display">{item.title}</h3>
+                        <p className="text-white/80 text-sm mt-1">{item.description}</p>
+                        <a 
+                          href={item.link} 
+                          className="inline-flex items-center mt-3 text-xs text-white/90 hover:text-white"
+                        >
+                          View Project <ExternalLink className="ml-1 h-3 w-3" />
+                        </a>
+                      </div>
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold font-display">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground mt-1 capitalize">{item.category}</p>
                     </div>
                   </div>
-                  <div className="p-4">
-                    <h3 className="font-semibold font-display">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-1 capitalize">{item.category}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </TabsContent>
+                ))}
+              </div>
+            </TabsContent>
+          ))}
         </Tabs>
         
         <div className="flex justify-center mt-12">
