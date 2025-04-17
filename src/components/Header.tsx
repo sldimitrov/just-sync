@@ -36,7 +36,7 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#home" className="flex items-center space-x-2">
-            <span className="text-2xl font-display font-bold text-brand-600">WebCraft<span className="text-brand-400">Pro</span></span>
+            <span className="text-2xl font-display font-bold text-brand-600">Just<span className="text-brand-400">Sync</span></span>
           </a>
 
           {/* Desktop Navigation */}

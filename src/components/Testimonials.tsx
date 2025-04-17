@@ -9,7 +9,7 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "CEO, FashionHub",
     image: "https://randomuser.me/api/portraits/women/1.jpg",
-    content: "Working with WebCraft Pro was an excellent experience from start to finish. They took the time to understand our brand and delivered a website that perfectly captures our vision. Our online sales have increased by 40% since launch!",
+    content: "Working with Just Sync was an excellent experience from start to finish. They took the time to understand our brand and delivered a website that perfectly captures our vision. Our online sales have increased by 40% since launch!",
     rating: 5
   },
   {
@@ -25,7 +25,7 @@ const testimonials = [
     name: "Emma Wilson",
     role: "Founder, TechStart",
     image: "https://randomuser.me/api/portraits/women/3.jpg",
-    content: "The landing page WebCraft Pro created for our product launch exceeded all expectations. It's not just beautiful - it converts visitors into customers. Their attention to detail and focus on user experience is outstanding.",
+    content: "The landing page Just Sync created for our product launch exceeded all expectations. It's not just beautiful - it converts visitors into customers. Their attention to detail and focus on user experience is outstanding.",
     rating: 5
   },
   {
@@ -33,7 +33,7 @@ const testimonials = [
     name: "David Rodriguez",
     role: "Small Business Owner",
     image: "https://randomuser.me/api/portraits/men/4.jpg",
-    content: "I was worried about the cost and complexity of getting a professional website, but WebCraft Pro made the process simple and affordable. My new business site looks amazing and has already brought in new customers.",
+    content: "I was worried about the cost and complexity of getting a professional website, but Just Sync made the process simple and affordable. My new business site looks amazing and has already brought in new customers.",
     rating: 4
   }
 ];
